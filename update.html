@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <style>
+        .box {
+            width: 1000px;
+            height: 300px;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background: #f4f7f8;
+            border-radius: 8px;
+        }
+
+        h1 {
+            margin: 0 0 30px 0;
+            text-align: center;
+        }
+
+        .col-sm-10 {
+            width: 10cm;
+
+        }
+
+        .form-control {
+            width: 10cm;
+        }
+
+
+
+        .buttons {
+            text-align: center;
+            ;
+        }
+
+        /*-------------------------------------*/
+
+        .cf:before,
+        .cf:after {
+            content: "";
+            display: table;
+        }
+
+        .cf:after {
+            clear: both;
+        }
+
+        .cf {
+            zoom: 1;
+        }
+
+        /*-------------------------------------*/
+
+        .form-wrapper {
+            width: 427px;
+            padding: 8px;
+            margin: 0px auto 50px auto;
+            background: #444;
+            background: rgba(0, 0, 0, .2);
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .4) inset, 0 1px 0 rgba(255, 255, 255, .2);
+            -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .4) inset, 0 1px 0 rgba(255, 255, 255, .2);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, .4) inset, 0 1px 0 rgba(255, 255, 255, .2);
+        }
+
+        .form-wrapper input {
+            width: 300px;
+            height: 35px;
+            padding: 10px 5px;
+            float: left;
+            font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+            border: 0;
+            background: #eee;
+            -moz-border-radius: 3px 0 0 3px;
+            -webkit-border-radius: 3px 0 0 3px;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .form-wrapper input:focus {
+            outline: 0;
+            background: #fff;
+            -moz-box-shadow: 0 0 2px rgba(0, 0, 0, .8) inset;
+            -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, .8) inset;
+            box-shadow: 0 0 2px rgba(0, 0, 0, .8) inset;
+        }
+
+        .form-wrapper input::-webkit-input-placeholder {
+            color: #999;
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        .form-wrapper input:-moz-placeholder {
+            color: #999;
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        .form-wrapper input:-ms-input-placeholder {
+            color: #999;
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        .form-wrapper button {
+            overflow: visible;
+            position: relative;
+            float: right;
+            border: 0;
+            padding: 0;
+            cursor: pointer;
+            height: 35px;
+            width: 110px;
+            font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+            color: #fff;
+            text-transform: uppercase;
+            background: #3ac162;
+            -moz-border-radius: 0 3px 3px 0;
+            -webkit-border-radius: 0 3px 3px 0;
+            border-radius: 0 3px 3px 0;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <br>
+    <h1><b>택배 상태 업데이트</b></h1>
+    <form class="form-wrapper cf">
+        <input type="text" placeholder="운송장 번호 입력" required>
+        <button type="submit">Search</button>
+    </form>
+
+    <form class="box">
+
+
+    </form>
+
+    <form class="form-horizontal">
+
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">위치</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="위치를 입력하시오.">
+            </div>
+        </div>
+
+        <label for="inputEmail3" class="col-sm-2 control-label">배송 상태</label>
+        <select class="form-control">
+
+            <option>집화처리</option>
+            <option>간선상차</option>
+            <option>간선하차</option>
+            <option>배달출발</option>
+            <option>배달완료</option>
+        </select>
+
+
+
+        <br>
+        <div class="buttons">
+            <button type="button" class="btn btn-success">업데이트</button>
+            <button type="button" class="btn btn-default">취소</button>
+        </div>
+
+        <br>
+</body>
+
+</html>
